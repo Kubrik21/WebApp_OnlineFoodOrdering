@@ -1,0 +1,14 @@
+.Nav {
+    display: flex;
+    background-color: rgb(21, 53, 90);
+    
+}
+.Nav-logo{
+    width:100px;
+
+}
+.Nav-motto{
+font-weight: bolder;
+font-size:38px;
+padding-left:15px;
+}
