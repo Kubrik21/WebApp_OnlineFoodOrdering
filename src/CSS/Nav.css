@@ -12,3 +12,9 @@ font-weight: bolder;
 font-size:38px;
 padding-left:15px;
 }
+.Nav-logo:hover {
+    cursor: pointer;
+}
+.Nav-motto:hover{
+    cursor:pointer;
+}

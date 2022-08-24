@@ -1,4 +1,4 @@
-import "../CSS/Motto.css"
+import "../../CSS/Motto.css"
 
 
 function Motto(){

@@ -1,0 +1,41 @@
+ul {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    background-color: rgb(138, 177, 241);
+    
+}
+.Button-category {
+
+    /* border-radius: 20px; */
+    padding:10px 20px;
+    /* background-color: rgb(92, 92, 157); */
+    font-weight: 500;
+    border:none;
+    background-color:rgb(138, 177, 241);
+}
+.Nap{
+    margin-top:40px;
+}
+
+.Restaurant-Name {
+    text-align: left;
+    padding:0 30px;
+    font-size:28px;
+}
+
+.Description{
+    text-align: left;
+    padding:0px 35px;
+    max-width: 600px;
+    margin-bottom: 0px;
+}
+.Abilities{
+    display: flex;
+    align-items: center;
+}
+.Abilities-icon{
+    width:25px;
+    height:20px;
+    padding-left:25px;
+}

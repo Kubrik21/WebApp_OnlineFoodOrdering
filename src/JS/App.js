@@ -1,18 +1,15 @@
 import '../CSS/App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-
-import {Main} from '../JS/Main'
+import { Routes, Route } from "react-router-dom";
+import { Main } from '../JS/Main/Main'
+import { ChoosenRestaurant } from './Restaurant/ChoosenRestaurant';
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/restaurant/:topicId" authed={true} element={<ChoosenRestaurant/ >} />
+      </Routes>
     </div>
   );
 }
