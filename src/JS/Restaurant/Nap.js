@@ -7,6 +7,11 @@ function Nap(params) {
     const [product, setProduct] = useState(params.param.state.Menu)
     const [category,setCategory] = useState({Category:"Wszystko"})
   
+    // const styles = {
+    //     backgroundColor: params.param.state.Category===category ? "#cccccc" : "transparent"  
+    //         }
+    //         console.log(params.param.state.Menu)
+    //dodaj isClicked i na to zrobić
     
     function changeCategory(param){
         setCategory(param.Category)
@@ -24,8 +29,8 @@ function Nap(params) {
 
    
     const Menu = (params.param.state.Menu).map((elem,index) => {
-        console.log(elem)
-        return (<button key={index+1} className="Button-category" onClick={()=>changeCategory(elem)} >{elem.Category}</button>)
+        //console.log(elem)
+        return (<button key={index+1}  className="Button-category" onClick={()=>changeCategory(elem)} >{elem.Category}</button>)
     })
     
 
