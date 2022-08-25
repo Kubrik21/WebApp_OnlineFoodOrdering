@@ -1,0 +1,10 @@
+.Footer{
+    height:60px;
+    background-color: rgb(21, 53, 90);
+}
+.Footer > h6{
+ color:white;
+ font-weight: 300;
+ font-size:medium;
+ padding:20px 0px;
+}
