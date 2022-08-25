@@ -3,9 +3,12 @@ import { Nav } from '../NavBar/NavBar'
 import { Graphic } from '../NavBar/Graphic'
 import { useLocation } from 'react-router-dom'
 import { Nap } from './Nap'
+import {Footer} from '../Footer/Footer'
+
 
 function ChoosenRestaurant(param) {
   const location = useLocation()
+  
 
   return (
     <div className="App">
@@ -14,6 +17,7 @@ function ChoosenRestaurant(param) {
       </header>
       <Graphic restaurantLogo={location.state.Logo} />
       <Nap param={location} />
+      <Footer/>
     </div>
   );
 }

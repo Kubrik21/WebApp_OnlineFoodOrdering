@@ -1,0 +1,22 @@
+.Header{
+    text-align:left;
+    margin-left:20px;
+    
+}
+.Dish
+{
+    background-color: rgba(232, 241, 251,1);
+    margin:5px 20px;
+    display:flex;
+    align-items: flex-start;
+}
+
+.Dish-img{
+padding:10px 10px;
+width:150px;
+
+}
+
+.Dish-info{
+
+}

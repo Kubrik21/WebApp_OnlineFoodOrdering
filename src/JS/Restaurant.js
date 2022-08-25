@@ -9,47 +9,51 @@ const Restaurants = [
         Menu: [
             {
                 Category: "Burgery",
+                Id:1,
                 Product: [
                     {
-                        ProductName: "Big Mac",
-                        Price: "26.00",
-                        logo: ''
+                        ProductName: "Grander",
+                        Price: "25.99",
+                        logo: 'https://amrestcdn.azureedge.net/kfc-web-ordering/KFC/Images/Web/new/grander.png'
                     },
                     {
-                        ProductName: "McRoyal",
-                        Price: "26.00",
-                        logo: ''
+                        ProductName: "Kentucky Gold Grander",
+                        Price: "26.99",
+                        logo: 'https://amrestcdn.azureedge.net/kfc-web-ordering/KFC/Images/Web/new/kentucky.png'
                     },
                 ]
             },
             {
                 Category: "Wrapy",
+                Id:2,
                 Product: [
                     {
-                        ProductName: "Classic Wrapper",
-                        Price: "26.00",
-                        logo: ''
+                        ProductName: "ITwist",
+                        Price: "8.99",
+                        logo: 'https://amrestcdn.azureedge.net/kfc-web-ordering/KFC/Images/Web/new/iTwist.png'
                     },
                 ]
             },
             {
                 Category: "Napoje",
+                Id:3,
                 Product: [
                     {
-                        ProductName: "CocaCola",
-                        Price: "26.00",
-                        logo: ''
+                        ProductName: "Pepsi",
+                        Price: "5.99",
+                        logo: 'https://amrestcdn.azureedge.net/kfc-web-ordering/KFC/Images/Web/napoje/pepsi%20_puszka.png'
                     },
 
                 ]
             },
             {
                 Category: "Inne",
+                Id:4,
                 Product: [
                     {
-                        ProductName: "Frytki",
-                        Price: "8.00",
-                        logo: ''
+                        ProductName: "Kubełek frytek",
+                        Price: "12.49",
+                        logo: 'https://amrestcdn.azureedge.net/kfc-web-ordering/KFC/Images/Web/dodatki/kubelki_1os-frytki_web.png'
                     },
 
                 ]
@@ -67,47 +71,51 @@ const Restaurants = [
         Menu: [
             {
                 Category: "Burgery",
+                Id:1,
                 Product: [
                     {
                         ProductName: "Big Mac",
                         Price: "26.00",
-                        logo: ''
+                        logo: 'https://cdn.mcdonalds.pl/uploads/20201125085847/big-mac2.jpg'
                     },
                     {
                         ProductName: "McRoyal",
                         Price: "26.00",
-                        logo: ''
+                        logo: 'https://cdn.mcdonalds.pl/uploads/20201125090250/mcroyal2.jpg'
                     },
                 ]
             },
             {
                 Category: "Wrapy",
+                Id:2,
                 Product: [
                     {
                         ProductName: "Classic Wrapper",
                         Price: "26.00",
-                        logo: ''
+                        logo: 'https://cdn.mcdonalds.pl/uploads/20210423094014/01-15-mcwrap-klasyczny.jpg'
                     },
                 ]
             },
             {
                 Category: "Napoje",
+                Id:3,
                 Product: [
                     {
                         ProductName: "CocaCola",
                         Price: "26.00",
-                        logo: ''
+                        logo: 'https://cdn.mcdonalds.pl/uploads/20191113190556/06-01-napo-j-sredni.jpg'
                     },
 
                 ]
             },
             {
                 Category: "Inne",
+                Id:4,
                 Product: [
                     {
                         ProductName: "Frytki",
                         Price: "8.00",
-                        logo: ''
+                        logo: 'https://cdn.mcdonalds.pl/uploads/20191002145139/07-01-frytki.jpg'
                     },
 
                 ]
@@ -125,6 +133,7 @@ const Restaurants = [
         Menu: [
             {
                 Category: "Burgery",
+                Id:1,
                 Product: [
                     {
                         ProductName: "Big Mac",
@@ -140,6 +149,7 @@ const Restaurants = [
             },
             {
                 Category: "Wrapy",
+                Id:2,
                 Product: [
                     {
                         ProductName: "Classic Wrapper",
@@ -150,6 +160,7 @@ const Restaurants = [
             },
             {
                 Category: "Napoje",
+                Id:3,
                 Product: [
                     {
                         ProductName: "CocaCola",
@@ -161,6 +172,7 @@ const Restaurants = [
             },
             {
                 Category: "Inne",
+                Id:4,
                 Product: [
                     {
                         ProductName: "Frytki",
@@ -183,6 +195,7 @@ const Restaurants = [
         Menu: [
             {
                 Category: "Burgery",
+                Id:1,
                 Product: [
                     {
                         ProductName: "Big Mac",
@@ -198,6 +211,7 @@ const Restaurants = [
             },
             {
                 Category: "Wrapy",
+                Id:2,
                 Product: [
                     {
                         ProductName: "Classic Wrapper",
@@ -208,6 +222,7 @@ const Restaurants = [
             },
             {
                 Category: "Napoje",
+                Id:3,
                 Product: [
                     {
                         ProductName: "CocaCola",
@@ -219,6 +234,7 @@ const Restaurants = [
             },
             {
                 Category: "Inne",
+                Id:4,
                 Product: [
                     {
                         ProductName: "Frytki",

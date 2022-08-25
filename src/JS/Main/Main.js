@@ -5,6 +5,7 @@ import {Restaurants} from '../Restaurant'
 import {Product} from './Product'
 import {Graphic} from '../NavBar/Graphic'
 import {Motto} from './Motto'
+import {Footer} from '../Footer/Footer'
 
 function Main() {
 
@@ -23,6 +24,7 @@ function Main() {
        <div className="List-of-restaurants">
           {elem}
        </div>
+       <Footer />
     </div>
   );
 }
