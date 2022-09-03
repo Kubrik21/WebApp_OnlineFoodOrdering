@@ -6,13 +6,13 @@ function Nap(params) {
 
     const [product, setProduct] = useState(params.param.state.Menu)
     const [category,setCategory] = useState({Category:"Wszystko"})
-  
+  /*
     // const styles = {
     //     backgroundColor: params.param.state.Category===category ? "#cccccc" : "transparent"  
     //         }
     //         console.log(params.param.state.Menu)
     //dodaj isClicked i na to zrobić
-    
+  */  
     function changeCategory(param){
         setCategory(param.Category)
         changeMenu(param)
@@ -35,7 +35,7 @@ function Nap(params) {
     
 
     const Product =product.map(elem=>{
-        
+        //console.log(elem);
         return(<Dish key={elem.Id} param={elem} />)
     })
 

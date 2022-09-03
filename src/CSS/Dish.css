@@ -3,9 +3,13 @@
     margin-left:20px;
     
 }
-.Dish
-{
+.Dish{
     background-color: rgba(232, 241, 251,1);
+    display:flex;
+    justify-content: space-between;
+}
+.Dish-Left
+{
     margin:5px 20px;
     display:flex;
     align-items: flex-start;
@@ -17,6 +21,43 @@ width:150px;
 
 }
 
-.Dish-info{
+.Dish-Counter{
+display:flex;
+position:relative;
+top:30px;
+margin-right:20px
+}
+.Dish-Counter button{
+    background-color: white;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    border:none;
+    font-weight: 700;
+    font-size: 1rem;
+    top:60px; 
+    
+}
+.Dish-Counter p{
+width:60px;
+height:60px;
+border-radius: 50%;
+background-color: rgb(21, 53, 90);
+text-align: center;
+color:white;
+font-size: 24px;
+position:relative;
 
+}
+
+#left {
+left:-10px;
+position:absolute;
+z-index: 1;
+
+}
+#right{
+right:-10px;
+position:absolute;
+z-index: 1;
 }
