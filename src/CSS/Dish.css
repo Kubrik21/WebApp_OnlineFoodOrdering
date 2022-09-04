@@ -7,6 +7,7 @@
     background-color: rgba(232, 241, 251,1);
     display:flex;
     justify-content: space-between;
+    margin: 10px 0px;
 }
 .Dish-Left
 {
@@ -24,8 +25,7 @@ width:150px;
 .Dish-Counter{
 display:flex;
 position:relative;
-top:30px;
-margin-right:20px
+justify-content: center;
 }
 .Dish-Counter button{
     background-color: white;
@@ -51,13 +51,35 @@ position:relative;
 }
 
 #left {
-left:-10px;
-position:absolute;
-z-index: 1;
-
+    left: 30px;
+    position: absolute;
+    z-index: 1;
 }
 #right{
-right:-10px;
-position:absolute;
-z-index: 1;
+    right: 30px;
+    position: absolute;
+    z-index: 1;
+}
+.Dish-choosing-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Dish-choosing-products-add-button{
+ width: 60px;
+ height:60px;
+ padding-right: 30px;
+}
+.Value-of-product{
+    top: 75%;
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Dish-choosing-product-counter-and-value
+{
+position:relative;
+justify-content: center;
+min-width:150px;
 }

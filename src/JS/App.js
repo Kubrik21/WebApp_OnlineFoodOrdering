@@ -2,12 +2,15 @@ import '../CSS/App.css';
 import { Routes, Route } from "react-router-dom";
 import { Main } from '../JS/Main/Main'
 import { ChoosenRestaurant } from './Restaurant/ChoosenRestaurant';
+import {useState} from 'react'
 
 function App() {
+ // const[bracket,setBracket]=useState([])
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main  />} />
         <Route path="/restaurant/:topicId" authed={true} element={<ChoosenRestaurant/ >} />
       </Routes>
     </div>

@@ -3,6 +3,7 @@ ul {
     justify-content: center;
     gap:30px;
     background-color: rgb(138, 177, 241);
+    padding: 5px 0px;
     
 }
 .Button-category {
@@ -10,6 +11,7 @@ ul {
     /* border-radius: 20px; */
     padding:10px 20px;
     /* background-color: rgb(92, 92, 157); */
+    font-size: large;
     font-weight: 500;
     border:none;
     background-color:rgb(138, 177, 241);
@@ -38,4 +40,16 @@ ul {
     width:25px;
     height:20px;
     padding-left:25px;
+}
+
+.Button-category-clicked
+{
+      border-radius: 20px; 
+     padding:10px 20px;
+      background-color: rgb(21, 53, 90);
+     font-size: large;
+     font-weight: 500;
+     border:none;
+     color:white;
+     
 }

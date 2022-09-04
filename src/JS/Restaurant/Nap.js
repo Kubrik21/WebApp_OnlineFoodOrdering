@@ -1,62 +1,74 @@
 import "../../CSS/Nap.css"
-import { useState } from 'react'
-import {Dish} from "./Dish"
+import { useEffect, useState } from 'react'
+import { Dish } from "./Dish"
 
-function Nap(params) {
+function Nap(restaurantsData) {
 
-    const [product, setProduct] = useState(params.param.state.Menu)
-    const [category,setCategory] = useState({Category:"Wszystko"})
-  /*
-    // const styles = {
-    //     backgroundColor: params.param.state.Category===category ? "#cccccc" : "transparent"  
-    //         }
-    //         console.log(params.param.state.Menu)
-    //dodaj isClicked i na to zrobić
-  */  
-    function changeCategory(param){
-        setCategory(param.Category)
-        changeMenu(param)
+    const { dishes, restaurantDelivery, restaurantMinValue, restaurantName, restaurantMotto } = restaurantsData;
+
+    const [category, setCategory] = useState([{ Category: "Wszystko", isClicked: true }])
+
+
+    useEffect(() => {
+        createArray()
+    }, [dishes])
+
+
+
+    function createArray() {
+
+        if (dishes !== undefined) {
+
+            const listOfCategory = dishes.map(elem => elem.productCategory)
+
+            let uniqueCategory = []
+
+            listOfCategory.forEach((element) => {
+                if (!uniqueCategory.includes(element)) {
+                    uniqueCategory.push(element);
+                }
+            });
+            console.log(category.length)
+            if (category.length === 1) {
+                setCategory(prev => {
+                    const ret = uniqueCategory.map(elem => { return ({ Category: elem, isClicked: false }) })
+                    return ([...prev, ...ret])
+                });
+            }
+
+        }
     }
-    function changeMenu(param){
-        setProduct(()=>{
-            if(category==="Wszystko") {return(params.param.state.Menu)} else {
-               return([param]) 
-           }
+
+
+    function changeCategory(param) {
+
+        setCategory(prev => {
+            const result = prev.map(e => {
+                return (e.Category === param ? { ...e, isClicked: true } : { ...e, isClicked: false })
+            })
+            return result;
         })
     }
-    
 
+    const Menu = category.map((elem, index) => <button key={index} className={elem.isClicked?"Button-category-clicked":"Button-category"}  onClick={() => changeCategory(elem.Category)}>{elem.Category}</button>)
 
-   
-    const Menu = (params.param.state.Menu).map((elem,index) => {
-        //console.log(elem)
-        return (<button key={index+1}  className="Button-category" onClick={()=>changeCategory(elem)} >{elem.Category}</button>)
-    })
-    
-
-    const Product =product.map(elem=>{
-        //console.log(elem);
-        return(<Dish key={elem.Id} param={elem} />)
-    })
-
-    
     return (
+
         <div className="Nap">
-            <h1 className="Restaurant-Name" >{params.param.state.Name}</h1>
-            <p className="Description">{params.param.state.Description}</p>
+            <h1 className="Restaurant-Name" >{restaurantName}</h1>
+            <p className="Description">{restaurantMotto}</p>
             <div className="Abilities">
                 <img className="Abilities-icon" src="/ICON/biker.png" alt="biker"></img>
-                <p>{params.param.state.Delivery}  zł</p>
+                <p>{restaurantDelivery}  zł</p>
                 <img className="Abilities-icon" src="/ICON/bag.png" alt="bag"></img>
-                <p>  Min. {params.param.state.MinValue} zł</p>
+                <p>  Min. {restaurantMinValue} zł</p>
             </div>
             <nav>
                 <ul>
-                    <button key={0} className="Button-category" onClick={()=>changeCategory({Category:"Wszystko"})} >Wszystkie</button>
                     {Menu}
                 </ul>
             </nav>
-            {Product}
+            <Dish restaurant={restaurantName} category={category} /> 
         </div>
     )
 }
