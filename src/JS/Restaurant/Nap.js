@@ -7,11 +7,15 @@ function Nap(restaurantsData) {
     const { dishes, restaurantDelivery, restaurantMinValue, restaurantName, restaurantMotto } = restaurantsData;
 
     const [category, setCategory] = useState([{ Category: "Wszystko", isClicked: true }])
-
+    
+    const [restaurantMenu, setRestaurantMenu] = useState()
+   // const [chosenRestaurantMenu, setChosenRestaurantMenu]=useState()
 
     useEffect(() => {
-        createArray()
+        createArray();
+        createMenu("Wszystko")
     }, [dishes])
+
 
 
 
@@ -28,19 +32,61 @@ function Nap(restaurantsData) {
                     uniqueCategory.push(element);
                 }
             });
-            console.log(category.length)
+
+
             if (category.length === 1) {
                 setCategory(prev => {
                     const ret = uniqueCategory.map(elem => { return ({ Category: elem, isClicked: false }) })
                     return ([...prev, ...ret])
                 });
             }
-
         }
     }
+    function createMenu(par) {
+        
+        if (dishes !== undefined){
 
 
-    function changeCategory(param) {
+            let uniqueCategory = []
+            if(par==="Wszystko"){
+            const listOfCategory = dishes.map(elem => elem.productCategory)
+
+
+                listOfCategory.forEach((element) => {
+                    if (!uniqueCategory.includes(element)) {
+                        uniqueCategory.push(element);
+                    }
+                });
+                uniqueCategory.sort()
+            }
+            else uniqueCategory.push(par)
+            
+
+
+                if(uniqueCategory.length!==0)
+                {
+
+                setRestaurantMenu(()=>{
+                    const tempo = uniqueCategory.map(prev => {
+                    let tempArr = []
+                    dishes.forEach(e => { if (e.productCategory === prev) tempArr.push(e) })
+                    return (
+                        {
+                            category: prev,
+                            menu: tempArr
+                        }
+                        )
+                        
+                    })
+                    return tempo})
+                }
+            }
+        }
+        
+        function changeCategory(param) {
+        createMenu(param)
+
+        //setChosenRestaurantMenu(prev=>{const choosen = restaurantMenu.forEach(e=>{}); return choosen})
 
         setCategory(prev => {
             const result = prev.map(e => {
@@ -50,7 +96,7 @@ function Nap(restaurantsData) {
         })
     }
 
-    const Menu = category.map((elem, index) => <button key={index} className={elem.isClicked?"Button-category-clicked":"Button-category"}  onClick={() => changeCategory(elem.Category)}>{elem.Category}</button>)
+    const Menu = category.map((elem, index) => <button key={index} className={elem.isClicked ? "Button-category-clicked" : "Button-category"} onClick={() => changeCategory(elem.Category)}>{elem.Category}</button>)
 
     return (
 
@@ -68,7 +114,7 @@ function Nap(restaurantsData) {
                     {Menu}
                 </ul>
             </nav>
-            <Dish restaurant={restaurantName} category={category} /> 
+            <Dish menu={restaurantMenu} />
         </div>
     )
 }

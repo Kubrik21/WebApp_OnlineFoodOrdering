@@ -9,10 +9,11 @@ import { useEffect, useState } from 'react';
 
 
 function ChoosenRestaurant() {
+
   const location = useLocation()
 
   const [products, setProducts] = useState([])
-  //
+  
   
       async function getProduct() {
        try {

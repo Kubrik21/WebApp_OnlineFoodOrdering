@@ -8,9 +8,11 @@
     display:flex;
     justify-content: space-between;
     margin: 10px 0px;
+    min-height: 180px;
 }
 .Dish-Left
 {
+    margin: 15px 20px;
     margin:5px 20px;
     display:flex;
     align-items: flex-start;
@@ -19,6 +21,7 @@
 .Dish-img{
 padding:10px 10px;
 width:150px;
+margin: auto;
 
 }
 

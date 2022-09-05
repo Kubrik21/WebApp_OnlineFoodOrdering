@@ -3,54 +3,96 @@
     background-color: rgb(21, 53, 90);
     justify-content: space-between;
 }
-.Nav-Logo-Name{
-    display:flex;
+
+.Nav-Logo-Name {
+    display: flex;
 }
-.Nav-logo{
-    width:100px;
+
+.Nav-logo {
+    width: 100px;
 
 }
-.Nav-motto{
-font-weight: bolder;
-font-size:38px;
-padding-left:15px;
+
+.Nav-motto {
+    font-weight: bolder;
+    font-size: 38px;
+    padding-left: 15px;
 }
+
 .Nav-logo:hover {
     cursor: pointer;
 }
-.Nav-motto:hover{
-    cursor:pointer;
-}
-.Nav-basket{
-    padding:5px 20px;
-    width:80px;
-    height:80px;
+
+.Nav-motto:hover {
+    cursor: pointer;
 }
 
-.Nav-Dropdown{
-    position:relative;
+.Nav-basket {
+    padding: 5px 20px;
+    width: 80px;
+    height: 80px;
 }
-.Nav-Basket-button{
+
+.Nav-Dropdown {
+    position: relative;
+}
+
+.Nav-Basket-button {
     background-color: rgb(21, 53, 90);
-    border:none;
+    border: none;
     background: none;
 }
-.Nav-Dropdown-Menu{
-    min-width: 200px;
-    opacity:0;
-    position:absolute;
-    right:0;
-    top:calc(100%+.5rem);
+
+.Nav-Dropdown-Menu {
+    min-width: 300px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: calc(100%+.5rem);
     background-color: white;
     padding: .75rem;
     border-radius: .25rem;
     z-index: 2;
     pointer-events: none;
-    transform:translateY(-5px);
-    transition:opacity 150ms ease-in-out,transform 150ms ease-in-out;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,.3);
+    transform: translateY(-5px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
 }
-.Nav-Dropdown > .Nav-Basket-button:focus + .Nav-Dropdown-Menu{
-    opacity:1;
+
+.Nav-Dropdown>.Nav-Basket-button:focus+.Nav-Dropdown-Menu {
+    opacity: 1;
     pointer-events: auto;
+}
+
+.product {
+    text-align: left;
+    padding:0px;
+}
+
+.product-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.product-name {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.product-description {
+    display: flex
+}
+
+.product-description p{
+    padding-left:10px;
+    font-size:16px;
+}
+
+.order-button{
+    padding:10px 20px;
+    border:none;
+    background-color:rgb(21, 53, 90);;
+    color:white;
+    border-radius:5px;
+    font-size:16px;
 }
