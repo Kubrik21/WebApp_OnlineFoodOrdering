@@ -1,0 +1,108 @@
+
+.Order{
+    display:flex;
+    width: 70%;
+    
+    text-align: left;
+    justify-content:space-between;
+    background-color: rgba(232, 241, 251,1);
+    padding: 10px;
+    margin: 10px auto;
+}
+.Order-left{
+    display:flex;
+}
+.orderImg{
+    width:100px;
+    height:100px;
+}
+
+.Order h2{
+   margin:0px;
+   padding-left:5px;
+}
+.Order-button{
+    text-align: right;
+    border:none;
+    color:white;
+    background-color:rgb(21, 53, 90);
+    border-radius: 8px;
+    padding:10px 15px;
+    font-size: 14px;
+    margin:20px auto;
+}
+.OrderToAdress{
+    text-align: right;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.OrderProductValue
+{
+    color:grey;
+    margin:0px;
+    font-size:18px;
+    
+}
+.OrderProductSingleValue{
+    color:grey;
+    margin:0px;
+    font-size:12px;
+    padding-left:5px
+}
+.Order-right{
+    text-align: right;
+}
+.OrderRightH3{
+    padding-top: 20px;
+    margin: 0;
+}
+
+.Form{
+    width:70%;
+    text-align: left;
+    display: flex;
+    margin:25px auto;
+    justify-content: center;
+    gap:50px;
+}
+.Form input{
+    width: 150px;
+    height: 30px;
+    margin: 9px 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+.Form div{
+    flex-direction: column;
+    display: flex;
+}
+::placeholder {
+    padding-left:5px; 
+ }
+
+.Bike{
+    width:470px;
+}
+.ValueToPay{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:20px 0px;
+    align-items: baseline;
+}
+.ValueToPay h3{
+    margin:0;
+}
+.ValueToPay p{
+    
+    margin:0; 
+    font-weight: bold;
+}
+.DataForm
+{
+    margin:10px auto;
+}
+.paypal-button-container{
+    margin-bottom:120px;
+margin-top:40px;}

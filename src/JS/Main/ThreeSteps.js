@@ -1,4 +1,4 @@
-import { Step } from './Step'
+
 import { useState, useEffect } from 'react'
 
 
@@ -9,11 +9,9 @@ function ThreeSteps() {
         elem: [{url:"/ICON/firstStep.svg",desc:"1. Wybierz restaurację i potrawy"}, {url:"/ICON/seccondStep.svg",desc:"2. Podaj swoją lokalizację"}, {url:"/ICON/thirdStep.svg",desc:"3. Zapłać i ciesz się jedzeniem"}],
     })
 
-
     useEffect(() => {
         const interval = setInterval(() => {
             setStep(prev => {
-                console.table(prev.number, prev.elem.length)
                 if (prev.number + 1 < prev.elem.length)
                     return ({ ...prev, number: prev.number + 1 })
                 else

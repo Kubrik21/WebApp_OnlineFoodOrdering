@@ -1,0 +1,14 @@
+.Fields{
+    min-height: 100px;
+    width: 80%;
+    background-color: rgb(121, 146, 190);
+    margin: 20px auto;
+}
+
+
+td {
+    padding: 5px 30px;
+}
+th {
+    padding:5px 30px;
+}

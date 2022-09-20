@@ -1,0 +1,17 @@
+.Field {
+    min-height: 570px;
+   
+    margin: auto;
+    background-color: rgb(121, 146, 190);
+    height: 250px;
+}
+
+.h3{
+    margin:0 auto;
+    padding:10px 0;
+    padding-top:100px;
+}
+.Footer > h6{
+    margin:0 auto;
+}
+

@@ -1,17 +1,13 @@
 import '../../CSS/Dish.css'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useState } from 'react'
 import {useBasket,useBasketAdd} from "../../BasketContext"
 
 
 function Dish(props) {
-    const [isLoaded, setIsLoaded] = useState(false)
     const [counts, setCount] = useState([]);
-
     const basket = useBasket()
     const basketAdd = useBasketAdd()
-    //const Bracket = useContext(BasketContext)
- console.log(basket)
+    
     let newArr = []
 
     if (counts.length === 0 && props.menu !== undefined && newArr.length === 0) {

@@ -7,7 +7,6 @@ import "./BasketEvent"
 
 
 
-
 function Nav() {
     const basket = useBasket()
     const [value,setValue]=useState(0)
@@ -24,6 +23,7 @@ useEffect(()=>{
 
     const product=basket.map(e=>{
         return(
+            
         <div className="product">
             <h4 className="product-name">{e.productName}</h4>
             <div className="product-description">
@@ -47,12 +47,12 @@ useEffect(()=>{
                 </Link>
                 </div>
                 <div className="Nav-Dropdown" data-dropdown >
-                    <button className="Nav-Basket-button" data-dropdown-button><img className="Nav-basket" src="/ICON/Basket.png" alt="basket"></img></button>
-                    <div className="Nav-Dropdown-Menu">
+                    <button className="Nav-Basket-button" data-dropdown-button><img className="Nav-basket" src="/ICON/Basket.png" alt="basket" data-dropdown-button></img></button>
+                    <div className="Nav-Dropdown-Menu" >
                         <h3>Twój koszyk</h3>
                         {product}
                         <h4>Razem: {value} PLN</h4>
-                        <button className="order-button">Zamów</button>
+                        <Link to={`/order`} ><button className="order-button">Zamów</button></Link>
                     </div>
                 </div>
         </nav>

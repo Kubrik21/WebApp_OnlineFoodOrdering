@@ -8,15 +8,13 @@ import { useEffect, useState } from 'react';
 function Product(props) {
     const { restaurantLogo, restaurantName } = props
 
-
     const [restaurants, setRestaurants] = useState([])
-//
+
 
     async function getUser() {
      try {
        const {data} = await axios.get('https://localhost:5001/api/restaurant/');
        setRestaurants(data);
-       console.log(data)
      } catch (error) {
        console.error(error);
      }

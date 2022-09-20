@@ -17,7 +17,7 @@ function Main() {
   try {
     const {data} = await axios.get('https://localhost:5001/api/restaurant/');
     setRestaurants(data);
-  //  console.log(data)
+
   } catch (error) {
     console.error(error);
   }

@@ -37,12 +37,6 @@
     position: relative;
 }
 
-.Nav-Basket-button {
-    background-color: rgb(21, 53, 90);
-    border: none;
-    background: none;
-}
-
 .Nav-Dropdown-Menu {
     min-width: 300px;
     opacity: 0;
@@ -58,8 +52,14 @@
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
 }
+.Nav-Basket-button {
+    background-color: rgb(21, 53, 90);
+    border: none;
+    background: none;
+}
 
-.Nav-Dropdown>.Nav-Basket-button:focus+.Nav-Dropdown-Menu {
+
+.Nav-Dropdown.active> .Nav-Basket-button + .Nav-Dropdown-Menu {
     opacity: 1;
     pointer-events: auto;
 }
